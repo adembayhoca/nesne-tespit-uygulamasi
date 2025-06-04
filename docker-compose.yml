@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  nesne-tespit:
+    build: .
+    container_name: nesne-tespit-app
+    restart: unless-stopped
+    
+    # Port mapping (gelecekte web interface için)
+    ports:
+      - "8080:8080"
+    
+    # Volume mounting
+    volumes:
+      - ./veritabani:/app/veritabani
+      - ./tespit_raporlari:/app/tespit_raporlari
+      - ./loglar:/app/loglar
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    
+    # Environment variables
+    environment:
+      - DISPLAY=${DISPLAY}
+      - PYTHONUNBUFFERED=1
+    
+    # Device access (kamera için)
+    devices:
+      - /dev/video0:/dev/video0
+    
+    # Network mode (GUI için)
+    network_mode: host
+    
+    # Privileged mode (kamera erişimi için)
+    privileged: true
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "python", "-c", "import ana_uygulama; print('OK')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# Named volumes
+volumes:
+  veritabani:
+    driver: local
+  tespit_raporlari:
+    driver: local
+  loglar:
+    driver: local
+
+# Networks
+networks:
+  default:
+    name: nesne-tespit-network 
