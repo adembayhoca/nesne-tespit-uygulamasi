@@ -1,5 +1,9 @@
 # 🔍 Object Detection Application (Nesne Tespit Uygulaması)
 
+**📚 Documentation / Dokümantasyon:**
+- 🇬🇧 **English** → [README.md](README.md) *(You are here / Burada bulunuyorsunuz)*
+- 🇹🇷 **Türkçe** → [README_TR.md](README_TR.md)
+
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.8.0-green.svg)](https://opencv.org)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-8.3.145-orange.svg)](https://ultralytics.com)
