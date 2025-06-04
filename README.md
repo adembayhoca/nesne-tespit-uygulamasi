@@ -667,3 +667,11 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 **💻 Made with ❤️ by [Adem Bayhoca](https://github.com/adembayhoca)**
 
 </div> 
+
+---
+
+## 🔧 Git Konfigürasyon Güncellemesi
+**📅 Tarih**: 2025-01-27  
+**✅ Durum**: Git kullanıcı bilgileri başarıyla güncellendi  
+**👤 Kullanıcı**: adembayhoca  
+**📧 Email**: bayhoca77@gmail.com 
